@@ -39,11 +39,25 @@
   <!-- TODO: Change this title (remember to change the <title> tag as well) -->
   <h1>Question</h1>
 
-  <div id="loading"><p>Loading...</p></div>
-
-  <!-- TODO: Replace the contents of this script tag with your template -->
-  <script type="text/html">
-    <p><%- sheet_name.length %> rows in the worksheet</p>
+  <script type="text/javascript">
+    var url = "https://docs.google.com/spreadsheet/ccc?key=0Ar35F5WUAjXedE9SMDRnT0dmUXdNQmJxeG5CRXpjSVE";
+    gooss.data(
+      {
+        Food: {
+          url: url,
+          index: 0
+        },
+        Ingredients: {
+          url: url,
+          index: 1
+        }
+      },
+      function (err, data) {
+        if (err) return alert(err);
+        console.log(data);
+        document.getElementById("output").innerHTML = JSON.stringify(data, null, 2);
+      }
+    );
   </script>
 
   <div id="footer">
