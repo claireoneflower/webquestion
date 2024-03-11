@@ -3,29 +3,26 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Question</title>
-
-  <!-- TODO: Add your spreadsheet RSS feed URL and uncomment the following lines -->
-  <!-- <link rel="alternate" type="application/rss+xml" title="TITLE" href="" /> -->
-
   <link rel="stylesheet" href="css/text.css" type="text/css" media="screen" charset="utf-8" />
   <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type="text/javascript" src="./js/underscore-min.js"></script>
-  <script type="text/javascript" src="./js/gooss.js"></script>
+  <script type="text/javascript" src="js/underscore-min.js"></script>
+  <script type="text/javascript" src="js/gooss.js"></script>
 </head>
 <body>
-  <!-- TODO: Change this title (remember to change the <title> tag as well) -->
-  <h1>Question</h1>
+  <h1>gooss food example</h1>
+
+  <pre id="output">Loading...</pre>
 
   <script type="text/javascript">
-    var url = "https://docs.google.com/spreadsheets/d/1XM2BJmC7gSZsBBJlTmp2Ivc03GXMxiBmxZu8MJC2Etk/edit?usp=sharing";
+    var url = "https://docs.google.com/spreadsheets/d/1XM2BJmC7gSZsBBJlTmp2Ivc03GXMxiBmxZu8MJC2Etk";
     gooss.data(
       {
-        English: {
+        Food: {
           url: url,
           index: 0
         },
-        Korean: {
+        Ingredients: {
           url: url,
           index: 1
         }
@@ -37,8 +34,5 @@
       }
     );
   </script>
-
-  <div id="footer">
-  </div>
 </body>
 </html>
